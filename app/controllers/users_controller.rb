@@ -4,6 +4,10 @@ class UsersController < ApplicationController
 
   acts_as_messageable
 
+  def index
+    @users = User.all
+  end
+
   # GET /users/:id.:format
   def show
     # authorize! :read, @user
